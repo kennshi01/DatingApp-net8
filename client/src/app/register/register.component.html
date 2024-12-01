@@ -9,8 +9,18 @@
             [(ngModel)]="model.username"
             placeholder="Username"
         >
-
         <label>Username</label>
+    </div>
+
+    <div class="mb-3">
+        <label>Who is your favourite user?</label>
+        <select class="form-select">
+            @for (user of usersFromHomeComponent(); track $index) {
+                <option [value]="user.userName">
+                    {{user.userName}}
+                </option>
+            }
+        </select>
     </div>
 
     <div class="mb-3 form-floating">
@@ -21,7 +31,6 @@
             [(ngModel)]="model.password"
             placeholder="Password"
         >
-
         <label>Password</label>
     </div>
 
