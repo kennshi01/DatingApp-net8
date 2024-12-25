@@ -7,7 +7,7 @@ export interface Member {
     photoUrl: string
     knownAs: string
     created: Date
-    lastActive: string
+    lastActive: Date
     gender: string
     introduction: string
     interests: string
